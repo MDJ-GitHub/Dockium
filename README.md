@@ -1,9 +1,6 @@
 <p align="center">
   <img src="images/banner.png" alt="Dockium Banner" />
 </p>
-
-<br>
-
 <table align="center">
 <tr>
 <td align="center" width="40%">
