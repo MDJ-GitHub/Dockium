@@ -1,219 +1,69 @@
-<p align="center">
-  <img src="images/banner.png" alt="Dockium Banner" />
-</p>
+Terms of Service for Dockium Browser
 
-<br>
+Effective Date: November 8, 2026
 
-<table align="center">
-<tr>
-<td align="center" width="40%">
+Last Updated: November 8, 2026
 
-<img src="images/icon.png" alt="Dockium Icon" width="200"/>
+Welcome to Dockium! These Terms of Service ("Terms") govern your use of the Dockium desktop browser for Windows, its built-in features, and integrated tools (collectively, "Dockium" or the "Software").
 
-</td>
-<td align="left" width="60%">
+By downloading, installing, or using Dockium, you agree to be bound by these Terms. If you do not agree to these Terms, do not install or use the Software.
 
-<p align="center">
-<h1> 🌐 Dockium 🌐 </h1>
-<b>Dock Everything. Connect Endlessly.</b>
-</p>
+1. Acceptance and Eligibility
 
-## ✨ Overview
+By downloading or using Dockium, you affirm that you are at least 13 years of age (or the legal age of digital consent in your jurisdiction) and have the full authority to enter into these Terms. Dockium is provided exclusively as a Windows desktop application.
 
-**Dockium** is the ultimate Chromium browser for elite power users. Dock your world, isolate your accounts, and enjoy a background-first, live-updated workspace engineered to keep you endlessly connected.
+2. Description of Features & Software Functionality
 
-It blends **productivity, privacy, and performance** into one seamless browser.
+Dockium is a Chromium-based desktop browser for Windows equipped with specialized productivity, privacy, and customization features:
 
-</td>
-</tr>
-</table>
+Dock Apps & Isolated Sessions: You may pin web applications to the customizable Dockium sidebar ("Dock Apps"). Dock Apps launch automatically in the background upon application startup and operate in isolated session containers. This allows you to run multiple instances of the same website concurrently using separate user accounts.
 
-<br>
+System Tray Integration & Notifications: Closing the Dockium application window minimizes and hides the browser into the Windows System Tray. Dockium continues running in the background to calculate aggregate unread notification badges across your Dock Apps. You can terminate the background process entirely via the system tray context menu or Windows Task Manager.
 
----
+Rust-Based Adblocking: Dockium includes an integrated ad-blocking engine built with Rust (utilizing filter lists similar to Brave). Filter lists and adblocking features are provided "as-is." Dockium does not guarantee that all advertisements will be blocked or that website functionality will remain uninterrupted while blocking is active.
 
-<p align="center">
+Tor VPN & Custom Proxy Engine: Dockium includes privacy routing tools powered by the decentralized Tor network and support for custom proxy configurations. Routing can be configured globally or on a per-website basis, including exit country selection.
 
-<img src="https://img.shields.io/badge/Chromium-Based-4285F4?style=flat-square&logo=googlechrome&logoColor=white">
-<img src="https://img.shields.io/badge/Rust-Adblock_Engine-DEA584?style=flat-square&logo=rust&logoColor=white">
-<img src="https://img.shields.io/badge/Tor-Integrated_Routing-7D4698?style=flat-square&logo=torproject&logoColor=white">
-<img src="https://img.shields.io/badge/Windows-Platform-0078D6?style=flat-square&logo=windows&logoColor=white">
-<img src="https://img.shields.io/badge/Status-In_Development-orange?style=flat-square">
+PowerSleep Tab Discard System: Dockium allows users to configure granular tab inactivity timeouts (down to specific minutes). Upon reaching the designated timeout, Dockium terminates the tab's background process while leaving a visual "greyed-out husk" tab to reload the content upon click.
 
-</p>
+Integrated Offline Email Client: Dockium features an optional built-in email client supporting Gmail and Microsoft Outlook accounts. The client operates locally, supports offline reading/drafting, and runs in the sidebar.
 
----
+Chrome Extension Compatibility & Lack of Account Sync: Dockium supports standard Chrome Web Store extensions. Dockium does not provide cloud account synchronization for browser data (e.g., bookmarks, history, extension sync).
 
-## 🌟 Features
+3. User Conduct and Rules of Use
 
-⚓ **Dock Everything**  
-Press **+** to dock your essential sites and social channels into dedicated, session-isolated dock apps, always one click away and always active in the background.
+You agree to use Dockium strictly in compliance with applicable local, state, national, and international laws. You are strictly prohibited from:
 
-🔔 **Out of Sight. But Never Out of Touch.**  
-Close the browser and stay distraction-free. Dockium keeps running in your system tray, processes incoming alerts in real time, and shows your total unread count right where you need it.
+Using the Tor routing or custom proxy features for illegal activity, network abuse, unauthorized access, or distributing malicious payloads.
 
-😴 **Power Sleep**  
-A custom, aggressive discard engine freezes inactive tabs, reducing RAM and CPU usage to virtually zero. Tabs stay in your bar as lightweight shells with their full history and reload instantly when you return.
+Utilizing the integrated email client to send unsolicited bulk communications (spam), perform phishing, or violate third-party email provider terms (e.g., Google or Microsoft TOS).
 
-🛡️ **Rust-Powered Adblocker**
-Enjoy distraction-free web apps with an adblocker powered by high-speed Rust performance. Whether you are browsing normally or working inside docked sidebar sessions, keep every page clean and fast with customizable domain-level controls.
+Attempting to reverse engineer, decompile, or tamper with the security parameters of Dockium's isolated session architecture.
 
-🧅 **Anonymous Browsing on Your Terms**
-Take complete control of your online presence with integrated Tor routing. Route your entire connection or assign specific proxy rules per site and docked app. Choose your preferred exit country, auto-route for optimal speed, or plug in your own custom VPN/proxy server—giving you elite-level privacy with zero extra cost.
+4. Third-Party Web Applications & Email Accounts
 
-🎛️ **Your Dock, Your Way**  
-Move the dock anywhere you like, then fine-tune its width and icon size until it feels exactly right.
+Dock Apps & Third-Party Sites: Web applications loaded within Dock Apps or normal browser tabs are owned and operated by independent third parties. Your interactions with these services remain subject to their respective terms and policies.
 
----
+Email Service Providers: Dockium functions as a client-side interface for third-party email services (Gmail, Outlook). Dockium is not affiliated with Google or Microsoft and is not liable for account suspensions, service outages, or API changes initiated by third-party providers.
 
-## ⚙️ How It Works
+5. Disclaimers and Limitation of Liability
 
-- 🧩 **Chromium** > The most popular browser base. With exception of Google API stuff, fully compatible with all standard Chrome features.
-- ⚓ **Session-isolated dock apps** > Each dock app have it's own session, Allow multiple same active website each with its own account.
-- 🔔 **System tray service** > Closing the browser will simply dock it into the tray in form of counter counting total unread notifications.
-- 🦀 **Rust Adblocker** > Powers the high-speed adblock engine easily customizable to use for all or specific websites.  
-- 🧅 **Tor / proxy VPN routing** > Handles per-site and global privacy customizable to use for all or specific websites.
+"AS IS" Provision: Dockium is provided "AS IS" and "AS AVAILABLE," without warranties of any kind, whether express or implied.
 
----
+Tor Network Disclaimer: Dockium does not operate, manage, or control the Tor network relay nodes. We provide no guarantee regarding connection speeds, latency, node availability, or absolute uptime for Tor-routed connections.
 
-## 🖼️ Screenshots & Guide
+Limitation of Liability: To the maximum extent permitted by law, Dockium and its developers shall not be liable for any indirect, incidental, special, consequential, or data loss damages resulting from your use of or inability to use the browser, tab discarding behavior, or network routing features.
 
-<p align="center">
-  <img src="images/slide1.png" alt="Welcome to Dockium" width="80%" />
-</p>
+6. Intellectual Property
 
-<table align="center">
-<tr>
-<td align="center" width="50%" valign="top">
+Dockium, its brand name, logos, custom sidebar architecture, and UI implementations remain the exclusive property of Dockium. Open-source components (including Chromium engine code, Rust filter modules, and Tor integration libraries) remain subject to their respective open-source licenses.
 
-<p align="center"><b>⚓ Dock Everything</b></p>
-<img src="images/slide2.png" alt="Dock Everything" width="100%" />
+7. Modifications to Terms
 
-<p align="left">
-Dock any website as its own app with a <b>fully isolated session</b>. Docked apps stay <b>always alive</b> in the background and show a <b>red badge</b> with the total number of notifications.
-</p>
-<ul align="left">
-  <li>➕ <b>Add Button (+)</b>: docks the current site as its own app</li>
-  <li>🔴 <b>Red Badge</b>: live count of all unread notifications</li>
-  <li>🔐 <b>Separate Sessions</b>: cookies and logins never mix between apps</li>
-</ul>
+We reserve the right to modify these Terms at any time. Updated versions will be published on our official distribution channels or within the application. Continued use of Dockium following updates constitutes acceptance of the revised Terms.
 
-</td>
-<td align="center" width="50%" valign="top">
+8. Contact Information
 
-<p align="center"><b>🔔 System Tray</b></p>
-<img src="images/slide3.png" alt="System Tray" width="100%" />
+For questions or legal inquiries regarding these Terms, please contact:
 
-<p align="left">
-Closing the browser window docks Dockium into the tray instead of quitting. It stays alive and shows a <b>counter of all unread items across your docked apps</b>.
-</p>
-<ul align="left">
-  <li>📥 <b>Close to Tray</b>: the browser keeps running in the background</li>
-  <li>🔢 <b>Unified Counter</b>: one tray badge for every dock app</li>
-  <li>⚡ <b>Instant Restore</b>: click the tray icon to bring everything back</li>
-</ul>
-
-</td>
-</tr>
-<tr>
-<td align="center" width="50%" valign="top">
-
-<p align="center"><b>🛡️ Adblocker</b></p>
-<img src="images/slide5.png" alt="Adblocker" width="100%" />
-
-<p align="left">
-A built-in adblocker that works in both normal tabs and docked sessions.
-</p>
-<ul align="left">
-  <li>🌐 <b>Per-Domain Control</b>: enable or disable blocking for each site</li>
-  <li>⚓ <b>Works in Docks</b>: docked apps can have their own rules</li>
-  <li>🚀 <b>Faster Pages</b>: less clutter and fewer trackers</li>
-</ul>
-
-</td>
-<td align="center" width="50%" valign="top">
-
-<p align="center"><b>😴 Power Sleep</b></p>
-<img src="images/slide4.png" alt="Power Sleep" width="100%" />
-
-<p align="left">
-Save RAM and battery without losing your place.
-</p>
-<ul align="left">
-  <li>🧊 <b>Auto Freeze</b>: inactive tabs are put to sleep automatically</li>
-  <li>⚡ <b>Instant Reload</b>: tabs wake up the moment you return</li>
-  <li>🔋 <b>Lower Usage</b>: noticeably less CPU and memory</li>
-</ul>
-
-</td>
-</tr>
-<tr>
-<td align="center" width="50%" valign="top">
-
-<p align="center"><b>🧅 VPN</b></p>
-<img src="images/slide6.png" alt="Anonymous Browsing" width="100%" />
-
-<p align="left">
-Built-in privacy routing, no extensions needed.
-</p>
-<ul align="left">
-  <li>🧅 <b>Tor Routing</b>: route everything, or set rules per site and docked app</li>
-  <li>🌍 <b>Exit Country</b>: pick a country or let Dockium auto-route for speed</li>
-  <li>🔌 <b>Custom Proxy / VPN</b>: add your own server for full control</li>
-</ul>
-
-</td>
-<td align="center" width="50%" valign="top">
-
-<p align="center"><b>🎛️ Your Dock, Your Way</b></p>
-<img src="images/slide7.png" alt="Dock Customization" width="100%" />
-
-<p align="left">
-Make the dock fit your workflow.
-</p>
-<ul align="left">
-  <li>📐 <b>Flexible Position</b>: move the dock to any side of the window</li>
-  <li>↔️ <b>Adjustable Width</b>: slim or wide, your choice</li>
-  <li>🖼️ <b>Icon Size</b>: scale icons to match your screen</li>
-</ul>
-
-</td>
-</tr>
-</table>
-
----
-
-## 📥 Installation & Tutorial
-
-**Step 1:** Download from **Releases** or clone the repository  
-
-**Step 2:** Run the Dockium installer  
-
-**Step 3:** Launch Dockium and follow the welcome tour  
-
-**Step 4:** Press **+** to dock your first site  
-
-**Step 5:** Dock your world and stay endlessly connected ⚓  
-
-> ⚠️ Dockium is still under development. Please report any issue you find on the [Issues](../../issues) page.
-
----
-
-## 📦 Credits
-
-- 👨‍💻 Author → MDJ-Github (Me ^_^)
-- 🧩 Engine → [Chromium](https://www.chromium.org/)
-- 🧅 Anonymity → [Tor Project](https://www.torproject.org/)
-- 🦀 Adblock → Rust
-
----
-
-## 🚀 Final Note
-
-We are excited for you to start using Dockium! More features are on the way, and because Dockium is still under development, please report any issue you find on our GitHub page. Have fun re-exploring the web!
-
-<p align="center">
-  <img src="images/logo.png" alt="Dockium Logo" width="120" />
-</p>
-
-<p align="center"><b>Dock Everything. Connect Endlessly.</b></p>
+Email: mdj.googl@gmail.com
