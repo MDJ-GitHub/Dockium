@@ -1,219 +1,66 @@
-<p align="center">
-  <img src="images/banner.png" alt="Dockium Banner" />
-</p>
+# Privacy Policy for Dockium Browser
 
-<br>
+**Effective Date:** November 8, 2026  
+**Last Updated:** November 8, 2026  
 
-<table align="center">
-<tr>
-<td align="center" width="40%">
-
-<img src="images/icon.png" alt="Dockium Icon" width="200"/>
-
-</td>
-<td align="left" width="60%">
-
-<p align="center">
-<h1> 🌐 Dockium 🌐 </h1>
-<b>Dock Everything. Connect Endlessly.</b>
-</p>
-
-## ✨ Overview
-
-**Dockium** is the ultimate Chromium browser for elite power users. Dock your world, isolate your accounts, and enjoy a background-first, live-updated workspace engineered to keep you endlessly connected.
-
-It blends **productivity, privacy, and performance** into one seamless browser.
-
-</td>
-</tr>
-</table>
-
-<br>
+At **Dockium**, protecting user privacy is foundational to our design. This Privacy Policy details how data is handled across Dockium's client-side features, including isolated sessions, local email storage, proxy routing, and memory management.
 
 ---
 
-<p align="center">
+## 1. Local-First Architecture & No Cloud Sync
 
-<img src="https://img.shields.io/badge/Chromium-Based-4285F4?style=flat-square&logo=googlechrome&logoColor=white">
-<img src="https://img.shields.io/badge/Rust-Adblock_Engine-DEA584?style=flat-square&logo=rust&logoColor=white">
-<img src="https://img.shields.io/badge/Tor-Integrated_Routing-7D4698?style=flat-square&logo=torproject&logoColor=white">
-<img src="https://img.shields.io/badge/Windows-Platform-0078D6?style=flat-square&logo=windows&logoColor=white">
-<img src="https://img.shields.io/badge/Status-In_Development-orange?style=flat-square">
+Dockium operates on a **local-first privacy model**:
+* **No Account Sync:** Dockium does **not** collect, sync, or back up your browsing history, bookmarks, saved credentials, installed Chrome extensions, or settings to any external cloud infrastructure operated by Dockium.
+* **Local Storage:** All preferences, session data, cookies, and local database stores remain exclusively on your Windows device filesystem.
 
-</p>
+## 2. Feature-Specific Data Handling
 
----
+### A. Dock Apps & Isolated Sessions
+* **Session Partitioning:** Dock Apps execute within isolated browser session containers. Cookies, site storage, and cache partitions for each Dock App instance are stored locally in separate directories on your device.
+* **Zero Cross-Tracking:** Session data is never aggregated across isolated instances or uploaded to Dockium servers.
 
-## 🌟 Features
+### B. System Tray & Background Notifications
+* **Local Unread Badging:** To show unread message badges in the Dock App sidebar and Windows System Tray, Dockium parses notification counts directly from active client-side DOM elements/web APIs.
+* **No Telemetry Transmission:** Unread notification counts and active application statuses are calculated strictly on your machine and are never sent to external telemetry servers.
 
-⚓ **Dock Everything**  
-Press **+** to dock your essential sites and social channels into dedicated, session-isolated dock apps, always one click away and always active in the background.
+### C. Integrated Email Client (Gmail & Outlook)
+* **Local Credentials & Tokens:** OAuth tokens, login sessions, email metadata, and message contents are fetched directly between your device and your email provider's servers (Google / Microsoft).
+* **Local Offline Storage:** Downloaded emails and drafts for offline usage are cached locally on your device's hard drive using local database encryption.
+* **Zero Proxy/Relay:** Email traffic is never routed through Dockium servers. We cannot read, analyze, process, or sell your email contents.
 
-🔔 **Out of Sight. But Never Out of Touch.**  
-Close the browser and stay distraction-free. Dockium keeps running in your system tray, processes incoming alerts in real time, and shows your total unread count right where you need it.
+### D. Rust Adblocker
+* **On-Device Filtering:** Adblocking rules are compiled and executed locally using a high-performance Rust engine. Block decision logic occurs entirely on your device.
+* **No URL Logging:** Dockium does not record, log, or transmit the URLs of web requests evaluated or blocked by the adblock engine.
 
-😴 **Power Sleep**  
-A custom, aggressive discard engine freezes inactive tabs, reducing RAM and CPU usage to virtually zero. Tabs stay in your bar as lightweight shells with their full history and reload instantly when you return.
+### E. Tor Network & Custom Proxy Routing
+* **Zero Destination Logs:** When routing web traffic through Tor or custom proxies (globally or per-site), requests are encrypted and dispatched through the selected relays/nodes. Dockium does not track your destination IP addresses, DNS queries, or browsing destinations.
+* **Exit Country Preferences:** Your chosen exit country rules and per-site proxy configurations are saved locally in your browser preferences.
 
-🛡️ **Rust-Powered Adblocker**
-Enjoy distraction-free web apps with an adblocker powered by high-speed Rust performance. Whether you are browsing normally or working inside docked sidebar sessions, keep every page clean and fast with customizable domain-level controls.
+### F. PowerSleep (Tab Hibernation)
+* **Local Process Termination:** When a tab reaches your configured inactivity timeout, its system process is suspended locally to reduce system RAM consumption. The lightweight "husk tab" stores the tab URL locally to facilitate reloading upon user interaction. No browser state is shared externally.
 
-🧅 **Anonymous Browsing on Your Terms**
-Take complete control of your online presence with integrated Tor routing. Route your entire connection or assign specific proxy rules per site and docked app. Choose your preferred exit country, auto-route for optimal speed, or plug in your own custom VPN/proxy server—giving you elite-level privacy with zero extra cost.
+### G. Chrome Extensions
+* **Third-Party Extensions:** Extensions installed from the Chrome Web Store run locally within your browser. Extensions may have their own data collection practices governed by their respective privacy policies.
 
-🎛️ **Your Dock, Your Way**  
-Move the dock anywhere you like, then fine-tune its width and icon size until it feels exactly right.
+## 3. Data Sharing and Disclosure
 
----
+Because Dockium does not collect your browsing history, email contents, or network traffic logs, **we do not sell, rent, trade, or monetize your personal data.**
 
-## ⚙️ How It Works
+We only disclose data in the following rare scenarios:
+* **Legal Requirements:** If required by a valid law enforcement order targeting our corporate entities, we can only provide data that is actually in our possession (which is limited to basic support emails sent to us directly). We cannot provide browsing histories, email stores, or proxy logs, as we do not possess them.
 
-- 🧩 **Chromium** > The most popular browser base. With exception of Google API stuff, fully compatible with all standard Chrome features.
-- ⚓ **Session-isolated dock apps** > Each dock app have it's own session, Allow multiple same active website each with its own account.
-- 🔔 **System tray service** > Closing the browser will simply dock it into the tray in form of counter counting total unread notifications.
-- 🦀 **Rust Adblocker** > Powers the high-speed adblock engine easily customizable to use for all or specific websites.  
-- 🧅 **Tor / proxy VPN routing** > Handles per-site and global privacy customizable to use for all or specific websites.
+## 4. Security
+Dockium leverages Chromium's sandbox model alongside Windows security primitives to protect isolated sessions and encrypted local storage. However, overall system security also relies on maintaining the security of your Windows operating system and device.
 
----
+## 5. Your Data Control & Deletion
+You retain complete control over your data directly within Dockium:
+* **Clear Data:** You can clear cookies, isolated session storage, and cache per Dock App or globally at any time via Browser Settings.
+* **Email Accounts:** Removing an email account from the sidebar client immediately purges associated local database caches and tokens from your drive.
+* **App Removal:** Uninstalling Dockium removes stored local binaries and profile folders according to standard Windows uninstallation routines.
 
-## 🖼️ Screenshots & Guide
+## 6. Policy Updates
+We may update this Privacy Policy from time to time to reflect software updates or legal changes. Updates will be reflected by the "Last Updated" date at the top of this document.
 
-<p align="center">
-  <img src="images/slide1.png" alt="Welcome to Dockium" width="80%" />
-</p>
-
-<table align="center">
-<tr>
-<td align="center" width="50%" valign="top">
-
-<p align="center"><b>⚓ Dock Everything</b></p>
-<img src="images/slide2.png" alt="Dock Everything" width="100%" />
-
-<p align="left">
-Dock any website as its own app with a <b>fully isolated session</b>. Docked apps stay <b>always alive</b> in the background and show a <b>red badge</b> with the total number of notifications.
-</p>
-<ul align="left">
-  <li>➕ <b>Add Button (+)</b>: docks the current site as its own app</li>
-  <li>🔴 <b>Red Badge</b>: live count of all unread notifications</li>
-  <li>🔐 <b>Separate Sessions</b>: cookies and logins never mix between apps</li>
-</ul>
-
-</td>
-<td align="center" width="50%" valign="top">
-
-<p align="center"><b>🔔 System Tray</b></p>
-<img src="images/slide3.png" alt="System Tray" width="100%" />
-
-<p align="left">
-Closing the browser window docks Dockium into the tray instead of quitting. It stays alive and shows a <b>counter of all unread items across your docked apps</b>.
-</p>
-<ul align="left">
-  <li>📥 <b>Close to Tray</b>: the browser keeps running in the background</li>
-  <li>🔢 <b>Unified Counter</b>: one tray badge for every dock app</li>
-  <li>⚡ <b>Instant Restore</b>: click the tray icon to bring everything back</li>
-</ul>
-
-</td>
-</tr>
-<tr>
-<td align="center" width="50%" valign="top">
-
-<p align="center"><b>🛡️ Adblocker</b></p>
-<img src="images/slide5.png" alt="Adblocker" width="100%" />
-
-<p align="left">
-A built-in adblocker that works in both normal tabs and docked sessions.
-</p>
-<ul align="left">
-  <li>🌐 <b>Per-Domain Control</b>: enable or disable blocking for each site</li>
-  <li>⚓ <b>Works in Docks</b>: docked apps can have their own rules</li>
-  <li>🚀 <b>Faster Pages</b>: less clutter and fewer trackers</li>
-</ul>
-
-</td>
-<td align="center" width="50%" valign="top">
-
-<p align="center"><b>😴 Power Sleep</b></p>
-<img src="images/slide4.png" alt="Power Sleep" width="100%" />
-
-<p align="left">
-Save RAM and battery without losing your place.
-</p>
-<ul align="left">
-  <li>🧊 <b>Auto Freeze</b>: inactive tabs are put to sleep automatically</li>
-  <li>⚡ <b>Instant Reload</b>: tabs wake up the moment you return</li>
-  <li>🔋 <b>Lower Usage</b>: noticeably less CPU and memory</li>
-</ul>
-
-</td>
-</tr>
-<tr>
-<td align="center" width="50%" valign="top">
-
-<p align="center"><b>🧅 VPN</b></p>
-<img src="images/slide6.png" alt="Anonymous Browsing" width="100%" />
-
-<p align="left">
-Built-in privacy routing, no extensions needed.
-</p>
-<ul align="left">
-  <li>🧅 <b>Tor Routing</b>: route everything, or set rules per site and docked app</li>
-  <li>🌍 <b>Exit Country</b>: pick a country or let Dockium auto-route for speed</li>
-  <li>🔌 <b>Custom Proxy / VPN</b>: add your own server for full control</li>
-</ul>
-
-</td>
-<td align="center" width="50%" valign="top">
-
-<p align="center"><b>🎛️ Your Dock, Your Way</b></p>
-<img src="images/slide7.png" alt="Dock Customization" width="100%" />
-
-<p align="left">
-Make the dock fit your workflow.
-</p>
-<ul align="left">
-  <li>📐 <b>Flexible Position</b>: move the dock to any side of the window</li>
-  <li>↔️ <b>Adjustable Width</b>: slim or wide, your choice</li>
-  <li>🖼️ <b>Icon Size</b>: scale icons to match your screen</li>
-</ul>
-
-</td>
-</tr>
-</table>
-
----
-
-## 📥 Installation & Tutorial
-
-**Step 1:** Download from **Releases** or clone the repository  
-
-**Step 2:** Run the Dockium installer  
-
-**Step 3:** Launch Dockium and follow the welcome tour  
-
-**Step 4:** Press **+** to dock your first site  
-
-**Step 5:** Dock your world and stay endlessly connected ⚓  
-
-> ⚠️ Dockium is still under development. Please report any issue you find on the [Issues](../../issues) page.
-
----
-
-## 📦 Credits
-
-- 👨‍💻 Author → MDJ-Github (Me ^_^)
-- 🧩 Engine → [Chromium](https://www.chromium.org/)
-- 🧅 Anonymity → [Tor Project](https://www.torproject.org/)
-- 🦀 Adblock → Rust
-
----
-
-## 🚀 Final Note
-
-We are excited for you to start using Dockium! More features are on the way, and because Dockium is still under development, please report any issue you find on our GitHub page. Have fun re-exploring the web!
-
-<p align="center">
-  <img src="images/logo.png" alt="Dockium Logo" width="120" />
-</p>
-
-<p align="center"><b>Dock Everything. Connect Endlessly.</b></p>
+## 7. Contact Us
+For questions regarding this Privacy Policy or privacy practices within Dockium, please contact:  
+**Email:** privacy@dockium.com
